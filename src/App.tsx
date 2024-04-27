@@ -1,23 +1,19 @@
 import "./App.css";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import CardEnrollComplete from "./components/payment/CardEnrollComplete";
 import CardEnrollForm from "./components/payment/CardEnrollForm";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <CardEnrollForm />,
-  },
-  {
-    path: "/card-enroll-complete",
-    element: <CardEnrollComplete />,
-  },
-]);
-
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter basename={"/react-payments"}>
+      <Routes>
+        <Route path={"/"} element={<CardEnrollComplete />} />
+        <Route path={"/card-enroll-complete"} element={<CardEnrollForm />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
