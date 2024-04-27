@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter basename={"/react-payments/"}>
       <Routes>
-        <Route path={"/"} element={<CardEnrollComplete />} />
-        <Route path={"/card-enroll-complete"} element={<CardEnrollForm />} />
+        <Route path="/" element={<CardEnrollForm />} />
+        <Route path="/card-enroll-complete" element={<CardEnrollComplete />} />
       </Routes>
     </BrowserRouter>
   );
