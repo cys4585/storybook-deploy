@@ -1,0 +1,3 @@
+import{S as t}from"./Select-Bs-MOhmf.js";import"./jsx-runtime-BnIj46N_.js";import"./index-CsdIBAqE.js";import"./styled-components.browser.esm-BDDUX98t.js";const i={component:t},l={options:[{value:"visa",label:"Visa"},{value:"mastercard",label:"MasterCard"},{value:"amex",label:"American Express"}],placeholder:"story test!!",isError:!1,onChange:o=>console.log(o.target.value)},e={args:l};var a,r,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args
+}`,...(s=(r=e.parameters)==null?void 0:r.docs)==null?void 0:s.source}}};const u=["Default"];export{e as Default,u as __namedExportsOrder,i as default};
