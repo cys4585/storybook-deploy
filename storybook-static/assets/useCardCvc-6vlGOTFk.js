@@ -1,0 +1,14 @@
+import{j as r}from"./jsx-runtime-BnIj46N_.js";import{T as v,L as C,E as h}from"./ErrorMessage-CSnPlGZt.js";import{I as x}from"./Input-Dqji-sXd.js";import{u as l}from"./styled-components.browser.esm-BDDUX98t.js";import{r as o}from"./index-CsdIBAqE.js";import{i as T}from"./isNumericString-BqsgwGh2.js";import{u as d}from"./useBoolean-C4Nz0XNG.js";function I({valueState:e,errorState:s,inputRef:t,onChange:n,onBlur:c,onFocus:p}){return o.useEffect(()=>{var i;(i=t.current)==null||i.focus()},[]),r.jsxs(y,{children:[r.jsx("div",{children:r.jsx(v,{children:"CVC 번호를 입력해 주세요"})}),r.jsxs(M,{children:[r.jsx(C,{children:"CVC"}),r.jsx(R,{children:r.jsx(x,{ref:t,maxLength:4,placeholder:"123",value:e,isError:s.isError,onChange:n,onBlur:c,onFocus:p})}),s.isError&&r.jsx(h,{message:s.errorMessage})]})]})}const y=l.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+`,M=l.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`,R=l.div`
+  display: flex;
+  width: 100%;
+  gap: 10px;
+`;I.__docgenInfo={description:"",methods:[],displayName:"CardCvcInput",props:{valueState:{required:!0,tsType:{name:"string"},description:""},errorState:{required:!0,tsType:{name:"CardCvcErrorState"},description:""},inputRef:{required:!0,tsType:{name:"ReactRefObject",raw:"React.RefObject<HTMLInputElement>",elements:[{name:"HTMLInputElement"}]},description:""},onChange:{required:!0,tsType:{name:"signature",type:"function",raw:"(event: React.ChangeEvent<HTMLInputElement>) => void",signature:{arguments:[{type:{name:"ReactChangeEvent",raw:"React.ChangeEvent<HTMLInputElement>",elements:[{name:"HTMLInputElement"}]},name:"event"}],return:{name:"void"}}},description:""},onBlur:{required:!0,tsType:{name:"signature",type:"function",raw:"(event: React.FocusEvent<HTMLInputElement>) => void",signature:{arguments:[{type:{name:"ReactFocusEvent",raw:"React.FocusEvent<HTMLInputElement>",elements:[{name:"HTMLInputElement"}]},name:"event"}],return:{name:"void"}}},description:""},onFocus:{required:!0,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}};const j=e=>{if(!T(e))throw new Error("CVC는 숫자만 입력할 수 있어요")},w=e=>{if(!(e.length===3||e.length===4))throw new Error("CVC는 세 자리 또는 네 자리 숫자로 입력해 주세요")},N=()=>{const[e,s]=o.useState(""),[t,n]=o.useState({isError:!1,errorMessage:""}),{flag:c,setTrue:p}=d(),i=o.useRef(null),{flag:m,setTrue:g,setFalse:f}=d(!1),E=o.useMemo(()=>e.length>0&&!t.isError,[e,t.isError]);return{isFocused:m,isDoneThisStep:c,isValid:E,cardCvcInputProps:{valueState:e,errorState:t,inputRef:i,onChange:u=>{try{j(u.target.value),s(u.target.value),n({isError:!1,errorMessage:""})}catch(a){a instanceof Error&&n({isError:!0,errorMessage:a.message})}},onBlur:u=>{f();try{w(u.target.value),n({isError:!1,errorMessage:""}),p()}catch(a){a instanceof Error&&n({isError:!0,errorMessage:a.message})}},onFocus:()=>{g()}}}};export{I as C,N as u};
